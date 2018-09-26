@@ -9,7 +9,7 @@ import javax.persistence.*;
 @Data
 @ToString
 @Table(name = "applications")
-public class Application {
+public class MyApplication {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -22,4 +22,7 @@ public class Application {
     @ManyToOne
     private Camp camp;
 
+    public void setName(String name) {
+        this.name = program.getName();
+    }
 }

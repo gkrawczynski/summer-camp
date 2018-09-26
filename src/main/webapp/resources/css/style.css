@@ -180,6 +180,12 @@ a[type="button"].list-group-item:hover > .icon-plus {
   text-align: center;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
 /* Footer */
 #footer{
   /*background:#333333;*/

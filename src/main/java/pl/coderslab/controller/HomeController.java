@@ -27,13 +27,13 @@ public class HomeController {
         return "program/show";
     }
 
-    /*@RequestMapping("/camp")
-    public String camp(){
-        return "camp/show";
-    }*/
-
     @RequestMapping("/login")
     public String login(){
         return "login";
+    }
+
+    @RequestMapping("/bootstrap")
+    public String camp(){
+        return "welcome";
     }
 }

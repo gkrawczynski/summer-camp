@@ -1,7 +1,4 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="req" value="${pageContext.request}" />
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>${pageTitle}</title>
+    <%--<title>${pageTitle}</title>--%>
     <!-- Bootstrap core CSS -->
     <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/bootstrap.min.css"/>
     <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/fontello.css"/>
     <link type="text/css" rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/style.css"/>
 </head>
 <body>
-<nav class="navbar navbar-default">
+<nav id="navbarBackground" class="navbar navbar-default">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -34,9 +31,11 @@
                 <li><a href="/program">Programs</a></li>
                 <li><a href="/camps/show">Camps</a></li>
                 <li><a href="/applicants/form">Profile</a></li>
-                <li><a href="/application/form">Application</a></li>
+                <li><a href="/applications/form">Application</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="/applicants/showAdmin">Applicants Admin</a></li>
+                <li><a href="/camps/showAdmin">Camps Admin</a></li>
                 <li><a href="/">Welcome to Summer Camp!</a></li>
                 <li><a href="/login">Login</a></li>
             </ul>

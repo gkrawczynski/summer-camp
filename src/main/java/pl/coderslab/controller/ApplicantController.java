@@ -39,6 +39,13 @@ public class ApplicantController {
         return "applicant/show";
     }
 
+    @RequestMapping("/showAdmin")
+    public String showAdmin(Model model) {
+        System.out.println(applicantRepository.findAll());
+        model.addAttribute("applicants", applicantRepository.findAll() );
+        return "applicant/showAdmin";
+    }
+
     @GetMapping("/form")
     public String form(Model model) {
         model.addAttribute("applicant", new Applicant());
@@ -54,6 +61,12 @@ public class ApplicantController {
             applicantDao.save(applicant);
         }
         return "redirect:show/"+applicant.getId();
+    }
+
+    @RequestMapping("/delete/{id}")
+    public String deleteYes(@PathVariable Integer id) {
+        applicantDao.delete(id);
+        return "redirect:../showAdmin";
     }
 
 }

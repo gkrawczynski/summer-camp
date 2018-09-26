@@ -14,12 +14,10 @@
     <label>Last Name:</label>      <c:out value="${applicant.lastName}"/><br>
     <label>Date of birth:</label>  <c:out value="${applicant.dateOfBirth}"/><br>
     <label>Street:</label>         <c:out value="${applicant.street}"/><br>
-    <label>Street number:</label>  <c:out value="${applicant.streetNumber}"/><br>
     <label>Postal code:</label>    <c:out value="${applicant.postalCode}"/><br>
     <label>Phone number:</label>   <c:out value="${applicant.phoneNumber}"/><br><br>
     <label><a class="btn btn-primary" href="/applicants/edit/<c:out value="${applicant.id}"/>"><i class="icon-cog"></i>Edit Profile</a></label>
-
-    <hr>
+    <%--<hr>--%>
 </ul>
 
 <%--<input type="submit" value="Edit Profile">--%>

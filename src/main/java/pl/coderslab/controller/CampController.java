@@ -48,4 +48,24 @@ public class CampController {
         return "camp/details";
     }
 
+    @RequestMapping("/showAdmin")
+    public String showAdmin(Model model) {
+        System.out.println(campRepository.findAll());
+        model.addAttribute("camps", campRepository.findAll() );
+        return "camp/showAdmin";
+    }
+
+    @RequestMapping("/edit/{id}")
+    public String edit(@PathVariable Integer id, Model model) {
+        Camp camp = campDao.findById(id);
+        model.addAttribute("camp", camp);
+        return "camp/form";
+    }
+
+    @RequestMapping("/delete/{id}")
+    public String deleteYes(@PathVariable Integer id) {
+        campDao.delete(id);
+        return "redirect:../showAdmin";
+    }
+
 }

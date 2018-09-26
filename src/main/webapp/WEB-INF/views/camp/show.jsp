@@ -28,23 +28,6 @@
     <li>Underpriviledge Camps</li>
     <li>YMCA  Camps</li>
 </ul>
-
-<%--<ul class="textCenter">
-    <h1>Camps</h1>
-    <c:forEach var="camp" items="${camps}">
-        <li>
-            Name:       <c:out value="${camp.name}"/><br>
-            Type:       <c:out value="${camp.type.name}"/><br>
-            City:       <c:out value="${camp.city.name}"/><br>
-            Country:    <c:out value="${camp.country.name}"/><br>
-            Size:       <c:out value="${camp.size}"/><br>
-            <a href="/camps/details/${camp.id}">Details</a>
-            <hr>
-        </li>
-    </c:forEach>
-    <a href="/camp/form">New</a>
-</ul>--%>
-
 <h1 class="textCenter">Camps</h1><br>
 <table class="table table-striped table-hover" align="center">
 <tr>
@@ -52,7 +35,7 @@
     <th>Type</th>
     <th>City</th>
     <th>Country</th>
-    <th>Number of campers</th>
+    <th>Kids</th>
     <th> </th>
 </tr>
 <c:forEach var="camp" items="${camps}">
